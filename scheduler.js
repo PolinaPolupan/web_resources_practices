@@ -9,11 +9,11 @@ const scrapeFlashInfo = require('./scrapers/scrapeFlashInfo');
 const scrapeActualite = require('./scrapers/scrapeActualite');
 
 const tasks = [
-    { name: '20minutes', cron: '*/1 * * * *', fn: scrape20Minutes, source: '20minutes.fr' }, // каждые 2 минуты
-    { name: 'ladepeche', cron: '*/2 * * * *', fn: scrapeLaDepeche, source: 'ladepeche.fr' },   // каждые 3 минуты
-    { name: 'francematin', cron: '*/2 * * * *', fn: scrapeFranceMatin, source: 'francematin.info' }, // каждые 4 минуты
-    { name: 'flashinfo', cron: '*/1 * * * *', fn: scrapeFlashInfo, source: 'flashinfo.fr' },   // каждые 5 минут
-    { name: 'actualite', cron: '*/1 * * * *', fn: scrapeActualite, source: 'actualite-fr.com' } // каждые 6 минут
+    { name: '20minutes', cron: '*/1 * * * *', fn: scrape20Minutes, source: '20minutes.fr' },
+    { name: 'ladepeche', cron: '*/2 * * * *', fn: scrapeLaDepeche, source: 'ladepeche.fr' },
+    { name: 'francematin', cron: '*/2 * * * *', fn: scrapeFranceMatin, source: 'francematin.info' },
+    { name: 'flashinfo', cron: '*/1 * * * *', fn: scrapeFlashInfo, source: 'flashinfo.fr' },
+    { name: 'actualite', cron: '*/1 * * * *', fn: scrapeActualite, source: 'actualite-fr.com' }
 ];
 
 async function runTaskWithClaim(task) {
