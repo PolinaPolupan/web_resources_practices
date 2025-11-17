@@ -7,8 +7,9 @@ const News = sequelize.define('News', {
     category: { type: DataTypes.STRING, allowNull: true },
     image: { type: DataTypes.TEXT, allowNull: true },
     excerpt: { type: DataTypes.TEXT, allowNull: true },
-    date: { type: DataTypes.DATE, allowNull: true },
-    source: { type: DataTypes.STRING, allowNull: false }
+    date: { type: DataTypes.TEXT, allowNull: true },
+    source: { type: DataTypes.STRING, allowNull: false },
+    content: { type: DataTypes.TEXT, allowNull: true }
 }, {
     tableName: 'news',
     timestamps: false
