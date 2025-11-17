@@ -1,5 +1,6 @@
 const sequelize = require('./db');
-const News = require('./models/News');
+require('./models/News');
+require('./models/JobRun');
 
 (async () => {
     try {
