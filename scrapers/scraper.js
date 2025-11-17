@@ -76,7 +76,7 @@ async function scrapeSite(config) {
             });
         }
 
-        if (newsItems.length) await News.bulkCreate(newsItems);
+        if (newsItems.length) await News.bulkCreate(newsItems, { ignoreDuplicates: true });
         console.log(`${source}: данные сохранены!`);
 
     } catch (err) {
