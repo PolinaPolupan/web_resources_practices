@@ -12,7 +12,14 @@ const News = sequelize.define('News', {
     content: { type: DataTypes.TEXT, allowNull: true }
 }, {
     tableName: 'news',
-    timestamps: false
+    timestamps: false,
+    indexes: [
+        {
+            unique: true,
+            fields: ['link', 'source']
+        }
+    ]
 });
+
 
 module.exports = News;
