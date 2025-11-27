@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="container py-4">
     <h1>Статистика</h1>
-    
+
     <div class="row g-4 mb-5">
         <div class="col-md-3">
             <div class="summary-card">
@@ -10,19 +10,19 @@
             </div>
         </div>
         <div class="col-md-3">
-            <div class="summary-card" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+            <div class="summary-card" style="background:linear-gradient(135deg,#11998e,#38ef7d);">
                 <div class="number" id="totalSources">-</div>
                 <div class="label">Источников</div>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="summary-card" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+            <div class="summary-card" style="background:linear-gradient(135deg,#f093fb,#f5576c);">
                 <div class="number" id="totalCategories">-</div>
                 <div class="label">Категорий</div>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="summary-card" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+            <div class="summary-card" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">
                 <div class="number" id="avgTitleLength">-</div>
                 <div class="label">Сред. слов</div>
             </div>
@@ -91,8 +91,12 @@
 
     <div class="table-responsive table-modern">
         <table class="table table-hover mb-0">
-            <thead><tr><th>Источник</th><th>Заголовок</th><th>Категория</th></tr></thead>
-            <tbody id="recentArticles"><tr><td colspan="3" class="text-center">Загрузка... </td></tr></tbody>
+            <thead>
+            <tr><th>Источник</th><th>Заголовок</th><th>Категория</th></tr>
+            </thead>
+            <tbody id="recentArticles">
+            <tr><td colspan="3" class="text-center">Загрузка...</td></tr>
+            </tbody>
         </table>
     </div>
 </div>

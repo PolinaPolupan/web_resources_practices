@@ -16,10 +16,15 @@ body {
     box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
 }
 
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white !important;
+    font-weight: 600;
+}
+
 .navbar-custom .navbar-brand {
-    color: white;
-    font-weight: 700;
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .stats-card {
@@ -39,6 +44,7 @@ body {
     color: #4a5568;
     font-weight: 600;
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .summary-card {
@@ -48,17 +54,24 @@ body {
     padding: 1.5rem;
     text-align: center;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
 }
 
 .summary-card .number {
     font-size: 2.5rem;
     font-weight: 700;
+    color: white;
 }
 
 .summary-card .label {
     opacity: 0.9;
     font-size: 0.9rem;
     text-transform: uppercase;
+    color: white;
 }
 
 .chart-container {
@@ -84,7 +97,11 @@ body {
 
 .table-modern thead {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    color: #fff;
+}
+
+.table-modern-light thead th {
+    color: #333 !important;
 }
 
 .table-modern th,
@@ -92,30 +109,26 @@ body {
     padding: 1rem;
 }
 
+.table-modern tbody tr:hover {
+    background-color: #f8f9ff;
+}
+
 .badge-source {
     padding: 0.5rem 1rem;
     border-radius: 20px;
 }
 
-.refresh-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    color: white;
-    font-weight: 600;
-}
-
-.refresh-btn:hover {
-    transform: scale(1.05);
-    color: white;
-}
-
+.footer,
 footer {
     background: #2d3748;
     color: #a0aec0;
     padding: 2rem 0;
     margin-top: 3rem;
+}
+
+.footer p,
+footer p {
+    color: #a0aec0;
 }
 
 .news-card {
@@ -130,6 +143,15 @@ footer {
     transform: translateY(-5px);
 }
 
+.news-card .card-title a {
+    color: #2d3748;
+    text-decoration: none;
+}
+
+.news-card .card-title a:hover {
+    color: #667eea;
+}
+
 @media (max-width: 768px) {
     .summary-card .number {
         font-size: 2rem;
@@ -137,5 +159,9 @@ footer {
 
     .chart-container {
         height: 250px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem !important;
     }
 }
