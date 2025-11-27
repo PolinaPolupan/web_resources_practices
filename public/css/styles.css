@@ -1,34 +1,34 @@
 :root {
     --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --card-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     --border-radius: 16px;
 }
 
 body {
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
     min-height: 100vh;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 .navbar-custom {
-    background: var(--primary-gradient);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 1rem 0;
     box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
 }
 
-. navbar-custom .navbar-brand {
+.navbar-custom .navbar-brand {
     color: white;
     font-weight: 700;
-    font-size: 1. 5rem;
+    font-size: 1.5rem;
 }
 
 .stats-card {
     background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     height: 100%;
-    transition: transform 0. 3s ease;
+    transition: transform 0.3s ease;
 }
 
 .stats-card:hover {
@@ -42,22 +42,22 @@ body {
 }
 
 .summary-card {
-    background: var(--primary-gradient);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    border-radius: var(--border-radius);
+    border-radius: 16px;
     padding: 1.5rem;
     text-align: center;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
 }
 
-.summary-card . number {
+.summary-card .number {
     font-size: 2.5rem;
     font-weight: 700;
 }
 
 .summary-card .label {
     opacity: 0.9;
-    font-size: 0. 9rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
 }
 
@@ -69,7 +69,7 @@ body {
 .section-title {
     color: #2d3748;
     font-weight: 700;
-    margin-bottom: 1. 5rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid #667eea;
     display: inline-block;
@@ -77,17 +77,18 @@ body {
 
 .table-modern {
     background: white;
-    border-radius: var(--border-radius);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--card-shadow);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 .table-modern thead {
-    background: var(--primary-gradient);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
 }
 
-.table-modern th, .table-modern td {
+.table-modern th,
+.table-modern td {
     padding: 1rem;
 }
 
@@ -97,7 +98,7 @@ body {
 }
 
 .refresh-btn {
-    background: var(--primary-gradient);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
@@ -115,4 +116,26 @@ footer {
     color: #a0aec0;
     padding: 2rem 0;
     margin-top: 3rem;
+}
+
+.news-card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .summary-card .number {
+        font-size: 2rem;
+    }
+
+    .chart-container {
+        height: 250px;
+    }
 }
