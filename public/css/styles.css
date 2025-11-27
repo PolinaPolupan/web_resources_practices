@@ -1,0 +1,118 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --card-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    --border-radius: 16px;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.navbar-custom {
+    background: var(--primary-gradient);
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+}
+
+. navbar-custom .navbar-brand {
+    color: white;
+    font-weight: 700;
+    font-size: 1. 5rem;
+}
+
+.stats-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0. 3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-card h5 {
+    color: #4a5568;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.summary-card {
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.summary-card . number {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.summary-card .label {
+    opacity: 0.9;
+    font-size: 0. 9rem;
+    text-transform: uppercase;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+.section-title {
+    color: #2d3748;
+    font-weight: 700;
+    margin-bottom: 1. 5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #667eea;
+    display: inline-block;
+}
+
+.table-modern {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.table-modern thead {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.table-modern th, .table-modern td {
+    padding: 1rem;
+}
+
+.badge-source {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.refresh-btn {
+    background: var(--primary-gradient);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+}
+
+.refresh-btn:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+footer {
+    background: #2d3748;
+    color: #a0aec0;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}

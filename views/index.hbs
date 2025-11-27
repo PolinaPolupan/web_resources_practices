@@ -1,0 +1,31 @@
+<div class="container py-4">
+    <h1 class="mb-4"><i class="bi bi-newspaper"></i> Последние новости</h1>
+
+    <div class="row g-4">
+        {{#each news}}
+            <div class="col-md-6 col-lg-4">
+                <div class="card news-card h-100">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">{{this.source}}</span>
+                        <h5 class="card-title">
+                            <a href="{{this.link}}" target="_blank" class="text-decoration-none">
+                                {{this.title}}
+                            </a>
+                        </h5>
+                        {{#if this.category}}
+                            <p class="text-muted small">
+                                <i class="bi bi-folder"></i> {{this.category}}
+                            </p>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+    {{#unless news.length}}
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle"></i> Новости не найдены.  Запустите скрапер.
+        </div>
+    {{/unless}}
+</div>

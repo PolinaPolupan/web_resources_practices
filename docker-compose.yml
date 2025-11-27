@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: newspass
       POSTGRES_DB: newsdb
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
       - news_data:/var/lib/postgresql/data
 

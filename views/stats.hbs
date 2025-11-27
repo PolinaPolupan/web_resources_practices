@@ -1,0 +1,99 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="container py-4">
+    <h1>Статистика</h1>
+    
+    <div class="row g-4 mb-5">
+        <div class="col-md-3">
+            <div class="summary-card">
+                <div class="number" id="totalArticles">-</div>
+                <div class="label">Всего статей</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="summary-card" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+                <div class="number" id="totalSources">-</div>
+                <div class="label">Источников</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="summary-card" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                <div class="number" id="totalCategories">-</div>
+                <div class="label">Категорий</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="summary-card" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                <div class="number" id="avgTitleLength">-</div>
+                <div class="label">Сред. слов</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-lg-8">
+            <div class="stats-card">
+                <h5>Статьи по источникам</h5>
+                <div class="chart-container"><canvas id="sourcesChart"></canvas></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="stats-card">
+                <h5>Доля источников</h5>
+                <div class="chart-container"><canvas id="sourcesPieChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+            <div class="stats-card">
+                <h5>По категориям</h5>
+                <div class="chart-container"><canvas id="categoriesChart"></canvas></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="stats-card">
+                <h5>Топ категорий</h5>
+                <div class="chart-container"><canvas id="topCategoriesChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+            <div class="stats-card">
+                <h5>Слов в заголовках</h5>
+                <div class="chart-container"><canvas id="avgWordsChart"></canvas></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="stats-card">
+                <h5>Длина заголовков</h5>
+                <div class="chart-container"><canvas id="titleLengthChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+            <div class="stats-card">
+                <h5>Пропущенные поля</h5>
+                <div class="chart-container"><canvas id="missingFieldsChart"></canvas></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="stats-card">
+                <h5>Полнота данных</h5>
+                <div class="chart-container"><canvas id="completenessChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive table-modern">
+        <table class="table table-hover mb-0">
+            <thead><tr><th>Источник</th><th>Заголовок</th><th>Категория</th></tr></thead>
+            <tbody id="recentArticles"><tr><td colspan="3" class="text-center">Загрузка... </td></tr></tbody>
+        </table>
+    </div>
+</div>
+<script src="/js/app.js"></script>
